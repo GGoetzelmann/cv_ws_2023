@@ -1,0 +1,2 @@
+minimal solution 1: img, gray, bin, inv, cont, box
+minimal solution 2: img, gray, tophat, bin, cont, box
