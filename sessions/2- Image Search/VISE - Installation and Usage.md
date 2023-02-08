@@ -5,11 +5,6 @@
 - Internet connection
 - This information is mainly aimed at installations on Windows and Mac systems
 
-- On linux systems install from source or as docker image (might take a while)
-- In case of docker run with:
-  ```
-  docker run -d -p <local port>:9669 -v <local data folder>:/opt/vise/data/ ubuntu/vise:latest
-  ```
 
 ## Steps and commands
 - Go to website and download for your system: https://www.robots.ox.ac.uk/~vgg/software/vise/ 
@@ -18,11 +13,20 @@
 
 ![vise setup correctly](./assets/VISE-ready.png)
 
+### Alternative installation steps on other systems
+
+- On linux systems install from source or as docker image (might take a while)
+- In case of docker run with:
+  ```
+  docker run -d -p <local port>:9669 -v <local data folder>:/opt/vise/data/ ubuntu/vise:latest
+  ```
+
+
 # Usage
 
 ## Create search engine with sample data
 
-- Download sample data: !!link!!
+- [Download sample data](https://s.kit.edu/imagedata) or get it from your session instructor.
 - Unzip sample data
 - Create project (name of your choice)
 
@@ -43,6 +47,13 @@
 - Search results
 - Results list can be extended by clicking on show-button (twice)
 - To learn more about the matches between two images, click on image in result list
+
+## Example usage
+
+- Use your search engine to find an illustration similar to the following picture
+
+  ![illustration of ship in front of harbor](./assets/schiff-vor-stadt.jpg)
+- Try to find out, how many times the ship appears in your data set (compare numbers with your session instructor)
 
 ## Usage for automated search
 
