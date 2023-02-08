@@ -2,12 +2,15 @@
 
 For detailed information see [Quick start with DeepDetect Server](https://www.deepdetect.com/quickstart-server)
 
+NOTE: The information in this notebook is not so much meant as an exercise, because training takes up too much time. However, it documents the steps you have to take after you have successfully finished the installation instructions in session 3 in case you have labels for transfer learning
+
 ## Docker
 
 ### prerequisites
 
 - Docker installation
 - docker virtualization with GPU support in case of gpu
+- you need to provide a folder with folders of different labels (at least two)
 
 WARNING: Even then, training will take quite some time, at least a few hours.
 
@@ -23,6 +26,10 @@ WARNING: Even then, training will take quite some time, at least a few hours.
 # Using a pre-trained model for prediction or training
 
 ## Register service
+
+- adjust the "nclasses" to the number of classes you want to train on
+- adjust the model if needed. The squeezenet model ist very fast but results might not be ideal.
+
 ```
 curl --location --request PUT 'http://localhost:9998/services/squeeze4' \
 --header 'Content-Type: application/json' \
@@ -51,7 +58,9 @@ curl --location --request PUT 'http://localhost:9998/services/squeeze4' \
  }'
 ```
 ## Train Model
-only do this with GPU support
+
+- only do this with GPU support
+- you can use the registered service after training finished successfully
 
 ```
 curl --location --request POST 'http://localhost:9998/train' \
@@ -93,9 +102,11 @@ curl --location --request POST 'http://localhost:9998/train' \
 
 # Reloading a trained model
 
+- After restarting the server or moving to a different one, you have to register your trained model again. You do so by applying your newly trained weights.
+
 ## Register service
 
-- find best model by checking best_model.txt
+- find best model by checking best_model.txt and replace file path accordingly
 
 ```
 curl --location --request PUT 'http://localhost:9998/services/trainedsqueeze2' \
