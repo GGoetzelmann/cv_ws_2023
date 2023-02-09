@@ -24,9 +24,9 @@
 
 - for general usage information see [Quick Guide](https://www.uni-wuerzburg.de/fileadmin/10030600/Mitarbeiter/Reul_Christian/Projects/Layout_Analysis/LAREX_Quick_Guide.pdf)
 
-## Basics
+# Sample data
 
-
+[Sample Data of Books](https://drive.google.com/file/d/1MKRDw-WLFMzElJC7B9vZtTDFh5LELPSF/view?usp=share_link)
 
 
 
