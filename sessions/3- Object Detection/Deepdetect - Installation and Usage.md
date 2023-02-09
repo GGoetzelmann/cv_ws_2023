@@ -50,7 +50,7 @@ Data for prediction can be an image url or a base 64 string
 curl --location --request POST 'http://localhost:9998/predict' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-       "service":"trainedsqueeze2",
+       "service":"faces",
        "parameters":{
          "input":{
            "width":224,
