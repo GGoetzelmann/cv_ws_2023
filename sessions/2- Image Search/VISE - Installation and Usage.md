@@ -26,7 +26,7 @@
 
 ## Create search engine with sample data
 
-- [Download sample data](https://s.kit.edu/imagedata) or get it from your session instructor.
+- [Download sample data](https://s.kit.edu/imagedata) ([Download Mirror (Google Drive)](https://drive.google.com/file/d/1NNRy8-03X07SRTliqGxxidYTc0e0TAqr)) or get it from your session instructor.
 - Unzip sample data
 - Create project (name of your choice)
 
