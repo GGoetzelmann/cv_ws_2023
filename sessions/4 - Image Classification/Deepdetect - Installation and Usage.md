@@ -106,8 +106,6 @@ curl --location --request POST 'http://localhost:9998/train' \
 
 ## Register service
 
-- find best model by checking best_model.txt and replace file path accordingly
-
 ```
 curl --location --request PUT 'http://localhost:9998/services/trainedsqueeze2' \
 --header 'Content-Type: application/json' \
@@ -123,16 +121,15 @@ curl --location --request PUT 'http://localhost:9998/services/trainedsqueeze2' \
            "db": true
          },
          "mllib":{
-           "nclasses":4,
-           "finetuning": true
+           "nclasses":4
          }
        },
        "model":{
-         "repository":"/opt/models/multiple/", 
-         "weights": "/opt/models/multiple/model_iter_1500.caffemodel"
+         "repository":"/opt/models/multiple/"
        }
      }'
 ```
+- make sure the correct file is reloaded as weights (check against `best_model.txt`)
 
 # Predict
 
